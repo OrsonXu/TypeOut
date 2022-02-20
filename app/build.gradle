@@ -1,0 +1,151 @@
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+
+android {
+    signingConfigs {
+        release {
+            storeFile file('intervention_apk.jks')
+            storePassword '123456'
+            keyAlias kotlin_version
+            keyPassword '123456'
+        }
+    }
+    compileSdkVersion 28
+//    buildToolsVersion 28
+    defaultConfig {
+        applicationId "com.aware.smartphoneuse"
+        minSdkVersion 24
+        targetSdkVersion 28
+        versionCode 1
+        multiDexEnabled true
+        versionName "1.0"
+
+        //AWARE core sensors SyncAdapters
+//        resValue "string", "provider_accelerometer", android.defaultConfig.applicationId + ".provider.accelerometer"
+        resValue "string", "provider_applications", android.defaultConfig.applicationId + ".provider.applications"
+        resValue "string", "provider_aware", android.defaultConfig.applicationId + ".provider.aware"
+//        resValue "string", "provider_barometer", android.defaultConfig.applicationId + ".provider.barometer"
+        resValue "string", "provider_battery", android.defaultConfig.applicationId + ".provider.battery"
+        resValue "string", "provider_bluetooth", android.defaultConfig.applicationId + ".provider.bluetooth"
+        resValue "string", "provider_communication", android.defaultConfig.applicationId + ".provider.communication"
+        resValue "string", "provider_esm", android.defaultConfig.applicationId + ".provider.esm"
+//        resValue "string", "provider_gravity", android.defaultConfig.applicationId + ".provider.gravity"
+//        resValue "string", "provider_gyroscope", android.defaultConfig.applicationId + ".provider.gyroscope"
+        resValue "string", "provider_installations", android.defaultConfig.applicationId + ".provider.installations"
+//        resValue "string", "provider_keyboard", android.defaultConfig.applicationId + ".provider.keyboard"
+        resValue "string", "provider_light", android.defaultConfig.applicationId + ".provider.light"
+//        resValue "string", "provider_linear_accelerometer", android.defaultConfig.applicationId + ".provider.accelerometer.linear"
+        resValue "string", "provider_locations", android.defaultConfig.applicationId + ".provider.locations"
+//        resValue "string", "provider_magnetometer", android.defaultConfig.applicationId + ".provider.magnetometer"
+        resValue "string", "provider_network", android.defaultConfig.applicationId + ".provider.network"
+//        resValue "string", "provider_processor", android.defaultConfig.applicationId + ".provider.processor"
+//        resValue "string", "provider_proximity", android.defaultConfig.applicationId + ".provider.proximity"
+//        resValue "string", "provider_rotation", android.defaultConfig.applicationId + ".provider.rotation"
+        resValue "string", "provider_screen", android.defaultConfig.applicationId + ".provider.screen"
+//        resValue "string", "provider_significant", android.defaultConfig.applicationId + ".provider.significant"
+//        resValue "string", "provider_telephony", android.defaultConfig.applicationId + ".provider.telephony"
+//        resValue "string", "provider_temperature", android.defaultConfig.applicationId + ".provider.temperature"
+//        resValue "string", "provider_timezones", android.defaultConfig.applicationId + ".provider.timezone"
+//        resValue "string", "provider_traffic", android.defaultConfig.applicationId + ".provider.traffic"
+        resValue "string", "provider_wifi", android.defaultConfig.applicationId + ".provider.wifi"
+
+        //Bundled plugins provider authority overrides
+//        resValue "string", "provider_contacts_list", android.defaultConfig.applicationId + ".provider.contacts_list"
+//        resValue "string", "provider_conversations", android.defaultConfig.applicationId + ".provider.audio_final"
+        resValue "string", "provider_google_activity_recognition", android.defaultConfig.applicationId + ".provider.gar"
+        resValue "string", "provider_google_fused", android.defaultConfig.applicationId + ".provider.geofences"
+        resValue "string", "provider_applicationsdiff", android.defaultConfig.applicationId + ".provider.applicationsdiff"
+
+//        ndk {
+//            //选择要添加的对应cpu类型的.so库。
+//            abiFilters 'x86', 'armeabi', 'armeabi-v7a', 'armeabi-v8a'
+//        }
+
+    }
+    //Conversations plugin uses a native library, add support to importing that library
+    splits {
+        abi {
+            enable true
+            reset()
+            include 'armeabi'
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+    // Temporary fix until alpha10
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/ASL2.0'
+        exclude 'META-INF/proguard/androidx-annotations.pro'
+    }
+
+    sourceSets{
+        main{
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+}
+//adding AWARE's library to this project
+repositories {
+    maven { url "https://jitpack.io" }
+    maven { url 'https://maven.fabric.io/public' }
+}
+
+//Tell android studio to always try to get the latest version of the framework from JitPack.io
+configurations.all {
+    resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+    all*.exclude group: 'com.google.code.gson'
+}
+
+dependencies {
+    //add all the dependencies we need. the $ variables are set via Jenkins and, if not using it, from the project build.gradle
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.google.android.material:material:1.1.0-alpha07'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0-beta01'
+    implementation 'androidx.media:media:1.0.0-beta01'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0-beta01'
+    //these are AWARE's dependencies: MQTT, Google Location Services, GridLayout (for the ESMs), and Ion for the SSL communication
+    implementation "com.google.android.gms:play-services-location:17.0.0"
+    //our plugin has been compiled with 11.4.2, so ignore this
+    api('com.crashlytics.sdk.android:crashlytics:2.9.9@aar') {
+        transitive = true;
+    }
+    //    //adding AWARE now as a dependency
+    //    implementation "com.github.denzilferreira:aware-client:$aware_libs" //set by the project build.gradle/Jenkins
+    //    implementation "com.github.denzilferreira:aware-client:4.0.817" //set by the project build.gradle/Jenkins
+    implementation 'com.github.denzilferreira:aware-client:master-SNAPSHOT'
+    implementation 'com.github.anrwatchdog:anrwatchdog:1.4.0'
+    //    implementation 'com.github.prernaa.aware-client:aware-core:4.0.812'
+    //    implementation "com.github.prernaa:aware-client:$aware_libs"
+    //we add more plugins we want bundled after this. Let's compile now.
+    //UCLA needs: activity recognition, fused location plugins, conversations
+    // Contacts list not working any more
+    //    implementation 'com.github.denzilferreira:com.aware.plugin.contacts_list:master-SNAPSHOT' // this is giving me an error now
+    //    implementation "com.github.denzilferreira:com.aware.plugin.google.activity_recognition:master-SNAPSHOT"
+    //    implementation "com.github.denzilferreira:com.aware.plugin.google.fused_location:master-SNAPSHOT" // this is also giving me an error now
+    //    implementation "com.github.denzilferreira:com.aware.plugin.studentlife.audio_final:$aware_libs"
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation files('libs/Msc.jar')
+    implementation files('libs/gson-2.8.0.jar')
+//    implementation files('src/main/jniLibs/Msc.jar')
+
+    implementation "com.android.support:support-compat:28.0.0"
+
+}

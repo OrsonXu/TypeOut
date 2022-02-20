@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".WhitelistActivity"
+    tools:showIn="@layout/activity_whitelist">
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_margin="@dimen/text_margin"-->
+    <!--android:text="@string/large_text" />-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/time_setting_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/time_set_dialog_title"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TimePicker
+            android:id="@+id/tp_time"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:textAlignment="center"
+            android:timePickerMode="spinner"
+            app:layout_constraintBottom_toTopOf="@+id/btn_work_work"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/time_setting_text" />
+
+        <!--        <View-->
+        <!--            android:id="@+id/ViewforStartEnd"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="40dp"-->
+        <!--            android:textStyle="bold"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toBottomOf="@+id/tp_time" />-->
+
+        <TextView
+            android:id="@+id/textViewBlank"
+            android:layout_width="102dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tp_time" />
+
+        <TextView
+            android:id="@+id/textViewStarttime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:gravity="center"
+            android:text="开始时间"
+            app:layout_constraintEnd_toStartOf="@+id/textViewEndtime"
+            app:layout_constraintStart_toEndOf="@+id/textViewBlank"
+            app:layout_constraintTop_toBottomOf="@+id/tp_time" />
+
+        <TextView
+            android:id="@+id/textViewEndtime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            android:text="结束时间"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textViewStarttime"
+            app:layout_constraintTop_toBottomOf="@+id/tp_time" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="工作日 专注时段"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewBlank" />
+
+        <Button
+            android:id="@+id/btn_work_work"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:text="Button"
+            app:layout_constraintEnd_toStartOf="@+id/btn_work_work2"
+            app:layout_constraintStart_toEndOf="@+id/textView3"
+            app:layout_constraintTop_toBottomOf="@+id/textViewBlank" />
+
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:text="工作日 睡眠时段"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_work_work" />
+
+        <Button
+            android:id="@+id/btn_work_sleep"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:text="Button"
+            app:layout_constraintEnd_toStartOf="@+id/btn_work_sleep2"
+            app:layout_constraintStart_toEndOf="@+id/textView5"
+            app:layout_constraintTop_toBottomOf="@+id/btn_work_work" />
+
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:text="休息日 专注时段"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_work_sleep" />
+
+        <Button
+            android:id="@+id/btn_weekend_work"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:text="Button"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/btn_weekend_sleep"
+            app:layout_constraintEnd_toStartOf="@+id/btn_weekend_work2"
+            app:layout_constraintStart_toEndOf="@+id/textView6"
+            app:layout_constraintTop_toBottomOf="@+id/btn_work_sleep" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:text="休息日 睡眠时段"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_weekend_work" />
+
+        <Button
+            android:id="@+id/btn_weekend_sleep"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:text="Button"
+            app:layout_constraintBottom_toTopOf="@+id/btn_noon"
+            app:layout_constraintEnd_toStartOf="@+id/btn_weekend_sleep2"
+            app:layout_constraintStart_toEndOf="@+id/textView7"
+            app:layout_constraintTop_toBottomOf="@+id/btn_weekend_work" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="3dp"
+            android:text="@string/noon_text_cn"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/btn_noon"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="@+id/textView7"
+
+            app:layout_constraintTop_toBottomOf="@+id/btn_weekend_sleep" />
+
+        <Button
+            android:id="@+id/btn_noon"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="4dp"
+            android:text="Button"
+            app:layout_constraintEnd_toStartOf="@+id/btn_noon2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textView8"
+            app:layout_constraintStart_toStartOf="@+id/btn_weekend_sleep"
+            app:layout_constraintTop_toBottomOf="@+id/btn_weekend_sleep" />
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="1269dp">
+
+            <!--<TextView-->
+            <!--android:id="@+id/introwl"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:gravity="center_horizontal"/>-->
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_work_work2"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="16dp"
+            android:text="Button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_work_work"
+            app:layout_constraintTop_toBottomOf="@+id/textViewBlank" />
+
+        <Button
+            android:id="@+id/btn_work_sleep2"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="16dp"
+            android:text="Button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btn_work_sleep"
+            app:layout_constraintTop_toBottomOf="@+id/btn_work_work2" />
+
+        <Button
+            android:id="@+id/btn_weekend_work2"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="16dp"
+            android:text="Button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btn_weekend_work"
+            app:layout_constraintTop_toBottomOf="@+id/btn_work_sleep2" />
+
+        <Button
+            android:id="@+id/btn_weekend_sleep2"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="16dp"
+            android:text="Button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btn_weekend_sleep"
+            app:layout_constraintTop_toBottomOf="@+id/btn_weekend_work2" />
+
+        <Button
+            android:id="@+id/btn_noon2"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="16dp"
+            android:text="Button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btn_noon"
+            app:layout_constraintTop_toBottomOf="@+id/btn_weekend_sleep2" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:text="@string/noon_alert_cn"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toEndOf="@+id/btn_noon2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+
+            app:layout_constraintTop_toBottomOf="@+id/btn_noon" />
+
+        <Button
+            android:id="@+id/btn_set_noon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@color/design_default_color_secondary_variant"
+            android:gravity="center"
+            android:text="@string/noon_set_cn"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/btn_rsttime"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+        <Button
+            android:id="@+id/btn_rsttime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@color/design_default_color_secondary"
+            android:gravity="center"
+            android:text="@string/reset_time_cn"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btn_set_noon"
+            app:layout_constraintTop_toTopOf="@+id/btn_set_noon" />
+
+
+        <TextView
+            android:id="@+id/value_setting_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:backgroundTint="@color/colorGreyDark"
+            android:drawableTint="@color/colorGreyDark"
+            android:foregroundTint="@color/colorGreyDark"
+            android:text="@string/value_set_dialog_title"
+            android:textAlignment="center"
+            android:textColor="@color/colorGreyDark"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_rsttime" />
+
+        <CheckBox
+            android:id="@+id/checkBoxDiscipline"
+            android:layout_width="0dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:text="@string/textDiscipline"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toTopOf="@+id/checkBoxHealth"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/value_setting_text" />
+
+
+        <CheckBox
+            android:id="@+id/checkBoxHealth"
+            android:layout_width="0dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:text="@string/textHealth"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toTopOf="@+id/checkBoxOrder"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkBoxDiscipline" />
+
+
+        <CheckBox
+            android:id="@+id/checkBoxOrder"
+            android:layout_width="0dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:text="@string/textOrder"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toTopOf="@+id/checkBoxPersistence"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkBoxHealth" />
+
+
+        <CheckBox
+            android:id="@+id/checkBoxPersistence"
+            android:layout_width="0dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:text="@string/textPersistence"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toTopOf="@+id/checkBoxSelfAwareness"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkBoxOrder" />
+
+
+        <CheckBox
+            android:id="@+id/checkBoxSelfAwareness"
+            android:layout_width="0dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:text="@string/textSelfAwareness"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toTopOf="@+id/checkBoxSelfCare"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkBoxPersistence" />
+
+
+        <CheckBox
+            android:id="@+id/checkBoxSelfCare"
+            android:layout_width="0dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:text="@string/textSelfCare"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toTopOf="@+id/checkBoxResponsibility"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkBoxSelfAwareness" />
+
+        <CheckBox
+            android:id="@+id/checkBoxResponsibility"
+            android:layout_width="0dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:text="@string/textResponsibility"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toTopOf="@+id/whitelist_setting_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkBoxSelfCare"
+            app:layout_constraintVertical_chainStyle="spread" />
+
+        <TextView
+            android:id="@+id/whitelist_setting_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/title_activity_whitelist_save_cn"
+            android:textAlignment="center"
+            android:textColor="@color/colorGreyDark"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/wechat_switch"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkBoxResponsibility" />
+
+
+        <Switch
+            android:id="@+id/wechat_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/wechat_switch_text_cn"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/wechat_switch2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/whitelist_setting_text" />
+
+        <Switch
+            android:id="@+id/wechat_switch2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/wechat_switch2_text_cn"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/rvNumbers"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/wechat_switch" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="top"
+            app:constraint_referenced_ids="checkBoxSelfCare"
+            tools:layout_editor_absoluteY="558dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvNumbers"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="32dp"
+            android:gravity="center_horizontal"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toTopOf="@+id/whitelist_setting_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/wechat_switch2" />
+        <!--
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="61dp"
+                    app:layout_constraintBottom_toTopOf="@+id/btn_work_sleep"
+                    tools:layout_editor_absoluteX="213dp" /> -->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

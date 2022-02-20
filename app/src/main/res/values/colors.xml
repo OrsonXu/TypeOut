@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#8064A2</color>
+    <color name="colorPrimaryDark">#7064A2</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorNoSel">#D3D3D3</color>
+    <color name="colorSel">#C2A4FF</color>
+    <color name="black">#6F6F6F</color>
+    <color name="colorGreyDark">#808080</color>
+    <color name="input_text">#6CAEA6</color>
+    <color name="input_value">#8064A2</color>
+</resources>

@@ -1,0 +1,281 @@
+<resources>
+    <string name="app_name_cn">SleepIntervention</string>
+    <string name="app_name_no">无忧</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_enter_app_no">您现在的决定是？</string>
+    <string name="title_enter_app_cn">Your decision is?</string>
+    <string name="confirm_enter_no">确认进入</string>
+    <string name="confirm_enter_cn">Continue</string>
+    <string name="exit_app_no">Return to
+[sleep early]</string>
+    <string name="exit_app_cn">Exit APP</string>
+    <string name="title_button_whitelist_no">请输入设置更改密码</string>
+    <string name="title_button_whitelist_cn">Please enter password for changing app setting</string>
+    <string name="title_activity_whitelist">Interventions Enabled For Apps</string>
+    <string name="title_activity_setup">setup for settings</string>
+    <string name="title_activity_whitelist_save_no">应用设置</string>
+    <string name="title_activity_whitelist_save_cn">Please select apps to be intervened:</string>
+    <string name="title_setting">Setting</string>
+    <string name="add_permission">Permissions Detection</string>
+    <string name="add_notification">Allow Notification</string>
+    <string name="title_setting_noen">设置</string>
+    <string name="add_permission_noen">检测权限</string>
+    <string name="add_notification_noen">允许通知</string>
+    <string name="input_instruction_keep_cn">To use the APP, please type：</string>
+    <string name="input_instruction_keep_no">若要继续使用，请输入：</string>
+    <string name="input_instruction_need_cn">To use the app, please enter:</string>
+    <string name="input_instruction_need_no">我需要打开它吗？
+
+请输入：</string>
+    <string name="input_mid_cn">Think: Why </string>
+    <string name="input_mid_no">想一想：</string>
+    <string name="input_instruction_hint_cn">e.g., finish work / enjoy a book</string>
+    <string name="input_instruction_hint_no">例如：专心做事/早点休息/享受当下...</string>
+    <string name="input_instruction_eg_cn">Concentrate on your work/Enjoy your life</string>
+    <string name="input_instruction_eg_no">专心做事/早点休息/享受当下</string>
+    <string name="input_instruction_skip_cn">Skip intervention
+Reasons required for skip</string>
+    <string name="input_instruction_skip_no">跳过干预
+请注意过多跳过需要上报理由哦</string>
+    <string name="input_instruction_enter_cn">Continue</string>
+    <string name="input_instruction_enter_no">我仍决定继续使用</string>
+    <string name="input_instruction_exit_cn">Return to
+[sleep early]
+</string>
+    <string name="input_instruction_exit_no">我决定退出</string>
+    <string name="input_instruction_detect_cn">detect wrong input of “</string>
+    <string name="input_instruction_detect_no">检测到输入为 “</string>
+    <string name="input_instruction_wrong_cn">”，please edit and resubmit</string>
+    <string name="input_instruction_wrong_no">”，输入不正确，请修改后提交</string>
+    <string name="input_instruction_two_cn">please type at least two words after the second sentence</string>
+    <string name="input_instruction_two_no">请在第二句最后至少输入两个字</string>
+    <string name="input_instruction_require_cn">Please type in content</string>
+    <string name="input_instruction_require_no">必须要输入！返回无效！</string>
+    <string name="large_text">
+        "Material is the metaphor.\n\n"
+
+        "A material metaphor is the unifying theory of a rationalized space and a system of motion."
+        "The material is grounded in tactile reality, inspired by the study of paper and ink, yet "
+        "technologically advanced and open to imagination and magic.\n"
+        "Surfaces and edges of the material provide visual cues that are grounded in reality. The "
+        "use of familiar tactile attributes helps users quickly understand affordances. Yet the "
+        "flexibility of the material creates new affordances that supercede those in the physical "
+        "world, without breaking the rules of physics.\n"
+        "The fundamentals of light, surface, and movement are key to conveying how objects move, "
+        "interact, and exist in space and in relation to each other. Realistic lighting shows "
+        "seams, divides space, and indicates moving parts.\n\n"
+
+        "Bold, graphic, intentional.\n\n"
+
+        "The foundational elements of print based design typography, grids, space, scale, color, "
+        "and use of imagery guide visual treatments. These elements do far more than please the "
+        "eye. They create hierarchy, meaning, and focus. Deliberate color choices, edge to edge "
+        "imagery, large scale typography, and intentional white space create a bold and graphic "
+        "interface that immerse the user in the experience.\n"
+        "An emphasis on user actions makes core functionality immediately apparent and provides "
+        "waypoints for the user.\n\n"
+
+        "Motion provides meaning.\n\n"
+
+        "Motion respects and reinforces the user as the prime mover. Primary user actions are "
+        "inflection points that initiate motion, transforming the whole design.\n"
+        "All action takes place in a single environment. Objects are presented to the user without "
+        "breaking the continuity of experience even as they transform and reorganize.\n"
+        "Motion is meaningful and appropriate, serving to focus attention and maintain continuity. "
+        "Feedback is subtle yet clear. Transitions are efﬁcient yet coherent.\n\n"
+
+        "3D world.\n\n"
+
+        "The material environment is a 3D space, which means all objects have x, y, and z "
+        "dimensions. The z-axis is perpendicularly aligned to the plane of the display, with the "
+        "positive z-axis extending towards the viewer. Every sheet of material occupies a single "
+        "position along the z-axis and has a standard 1dp thickness.\n"
+        "On the web, the z-axis is used for layering and not for perspective. The 3D world is "
+        "emulated by manipulating the y-axis.\n\n"
+
+        "Light and shadow.\n\n"
+
+        "Within the material environment, virtual lights illuminate the scene. Key lights create "
+        "directional shadows, while ambient light creates soft shadows from all angles.\n"
+        "Shadows in the material environment are cast by these two light sources. In Android "
+        "development, shadows occur when light sources are blocked by sheets of material at "
+        "various positions along the z-axis. On the web, shadows are depicted by manipulating the "
+        "y-axis only. The following example shows the card with a height of 6dp.\n\n"
+
+        "Resting elevation.\n\n"
+
+        "All material objects, regardless of size, have a resting elevation, or default elevation "
+        "that does not change. If an object changes elevation, it should return to its resting "
+        "elevation as soon as possible.\n\n"
+
+        "Component elevations.\n\n"
+
+        "The resting elevation for a component type is consistent across apps (e.g., FAB elevation "
+        "does not vary from 6dp in one app to 16dp in another app).\n"
+        "Components may have different resting elevations across platforms, depending on the depth "
+        "of the environment (e.g., TV has a greater depth than mobile or desktop).\n\n"
+
+        "Responsive elevation and dynamic elevation offsets.\n\n"
+
+        "Some component types have responsive elevation, meaning they change elevation in response "
+        "to user input (e.g., normal, focused, and pressed) or system events. These elevation "
+        "changes are consistently implemented using dynamic elevation offsets.\n"
+        "Dynamic elevation offsets are the goal elevation that a component moves towards, relative "
+        "to the component’s resting state. They ensure that elevation changes are consistent "
+        "across actions and component types. For example, all components that lift on press have "
+        "the same elevation change relative to their resting elevation.\n"
+        "Once the input event is completed or cancelled, the component will return to its resting "
+        "elevation.\n\n"
+
+        "Avoiding elevation interference.\n\n"
+
+        "Components with responsive elevations may encounter other components as they move between "
+        "their resting elevations and dynamic elevation offsets. Because material cannot pass "
+        "through other material, components avoid interfering with one another any number of ways, "
+        "whether on a per component basis or using the entire app layout.\n"
+        "On a component level, components can move or be removed before they cause interference. "
+        "For example, a floating action button (FAB) can disappear or move off screen before a "
+        "user picks up a card, or it can move if a snackbar appears.\n"
+        "On the layout level, design your app layout to minimize opportunities for interference. "
+        "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
+        "when a user tries to pick up one of cards.\n\n"
+    </string>
+    <string name="whitelist_intro_cn">
+        "Please set the following two steps:\n"
+        "1. Please choose your own values, and our intervention will provide personalized content based on your choice.\n"
+        "2. Please select the application you need to intervene. Apps whose color is gray will not be interfered. Click on each application to activate/deactivate the intervention. After completing the settings, click 'Save'.\n"
+    </string>
+    <string name="whitelist_intro_no">
+        "请进行以下两步设置：\n"
+        "1. 请选择您合适自己的价值观，我们的干预将根据您的选择提供个性化的内容。\n"
+        "2. 请选择您需要干预的应用。颜色显示为灰色的应用将不被干预。点击每个应用可以激活/关闭干预。在完成设置后，点击'保存'。\n"
+    </string>
+    <string name="permission_succeed_cn">All permissions are authorized successfully</string>
+    <string name="permission_succeed_no">权限授权全部成功</string>
+    <string name="permission_failed_cn">Authorization failed, please click the button to authorize</string>
+    <string name="permission_failed_no">权限授权失败，请点击按钮进行授权</string>
+    <string name="refuse_cn">REFUSE</string>
+    <string name="refuse_no">拒绝</string>
+    <string name="set_time">Set Work and Sleep Time</string>
+    <string name="time_set_dialog_title">设置工作与入睡时间</string>
+    <string name="reset_time_cn">RESET</string>
+    <string name="confirm_time_cn">CONFIRM</string>
+    <string name="reset_time_no">重置</string>
+    <string name="confirm_time_no">确认</string>
+    <string name="cancel_cn">CANCEL</string>
+    <string name="cancel_no">确认</string>
+    <string name="work_start_time">Work Start Time</string>
+    <string name="work_cnd_time">Work End Time</string>
+    <string name="sleep_start_time">Sleep Start Time</string>
+    <string name="sleep_cnd_time">Sleep End Time</string>
+    <string name="edit_text_sleep_work">Please input the password of time setting</string>
+    <string name="textDiscipline">Self-control:to act in accordance with my own ideals</string>
+    <string name="textHealth">Fitness:to maintain or improve my fitness; to look after my physical and mental health and well-being</string>
+    <string name="textOrder">Order:to be orderly and organized</string>
+    <string name="textPersistence">Persistence:to continue resolutely, despite problems or difficulties</string>
+    <string name="textResponsibility">Responsibility:to be responsible and accountable for my actions</string>
+    <string name="textSelfAwareness">Self-awareness:to be aware of my own thoughts, feelings and actions</string>
+    <string name="textSelfCare">Self-care:to look after my health and well-being, and get my needs met</string>
+    <string name="value_set_dialog_title">Please select value items that are important to you:</string>
+    <string name="textDiscipline_noen">自律:按照自己制定的计划行事</string>
+    <string name="textHealth_noen">健康:能够保持或改善身心状态，能够照看自我的身心健康</string>
+    <string name="textOrder_noen">有序:为人处事井井有条，井然有序</string>
+    <string name="textPersistence_noen">坚定:不顾困难，能够坚持完成自己的目标</string>
+    <string name="textResponsibility_noen">责任:能够对个人的行为负责</string>
+    <string name="textSelfAwareness_noen">自我意识:了解自己的想法、感受和行动</string>
+    <string name="textSelfCare_noen">自我关心:愿意花时间照顾自己的健康和感受，满足自己的需求</string>
+    <string name="value_set_dialog_title_noen">请选择下列您认为对自己重要的价值观</string>
+    <string name="accessibility_service_description">help to capture the topActivity</string>
+    <string name="crash_title_no">请重启手机</string>
+    <string name="crash_title_cn">Please Restart the Phone</string>
+    <string name="crash_content_no">程序崩溃后需要重启手机.</string>
+    <string name="crash_content_cn">Phone restart is required after app crash.</string>
+    <string name="kill_title_no">请不要关闭APP</string>
+    <string name="kill_title_cn">Please Do Not Kill The App</string>
+    <string name="kill_content_no">关闭APP后台后需要手动打开</string>
+    <string name="kill_content_cn">Please Restart the APP after kill it.</string>
+    <string name="running_no">输入以下内容切换阶段或作为设置密码: 1 - 无干预, 2 - 内容干预, 3 - 随机干预, 4 - 仅弹窗干预\n正在运行</string>
+    <string name="running_cn">Enter following number for change phase or as setting password: 1 - No Intervention, 2 - Meaningful Text, 3 - Random Text, 4 - Pop Up Layout\nRunning</string>
+    <string name="no_notifications_no"> 阶段\n将不会显示提示</string>
+    <string name="no_notifications_cn"> Phase.\nNo notifications will show.</string>
+    <string name="have_notifications_no"> 阶段\n将会显示提示</string>
+    <string name="have_notifications_cn"> Phase.\nNotifications should show.</string>
+    <string name="wechat_switch_text_cn">Whether add Wechat SNS Timeline in Blacklist</string>
+    <string name="wechat_switch_text_no">是否对微信朋友圈使用进行干预</string>
+    <string name="wechat_switch2_text_cn">Whether add Wechat mini Program in Blacklist</string>
+    <string name="wechat_switch2_text_no">是否对微信小程序使用进行干预</string>
+    <string name="participant_info_cn">Participant Info Form: https://forms.gle/cvoVJMKxnyDG23xY7</string>
+    <string name="participant_info_no">参与者问卷: https://forms.gle/cvoVJMKxnyDG23xY7</string>
+    <string name="email_cn">For help, please contact with study assistant</string>
+    <string name="email_no">如需帮助，请联系实验小助手</string>
+    <string name="wrong_password_cn">Wrong Password</string>
+    <string name="wrong_password_no">密码错误</string>
+    <string name="wait_cn">Please Wait</string>
+    <string name="wait_no">请稍候</string>
+    <string name="not_use_app_cn">No App Use in </string>
+    <string name="not_use_app_no">已未使用APP </string>
+    <string name="hour_cn"> hrs</string>
+    <string name="hour_no"> 小时</string>
+    <string name="enable_aware_cn">Please Enable AWARE in Accessibility Settings!</string>
+    <string name="enable_aware_no">请在无障碍设置中允许AWARE！</string>
+    <string name="study_title_cn">Smartphone Use Study</string>
+    <string name="study_title_no">智能手机使用实验</string>
+    <string name="save_cn">Save</string>
+    <string name="save_no">保存</string>
+    <string name="saving_cn">Saving</string>
+    <string name="saving_no">保存中</string>
+    <string name="noon_alert_cn">The interval of start and end of the noon break can not larger than 3 hours</string>
+    <string name="noon_alert_no">午休开始和结束间隔不能大于三个小时</string>
+    <string name="default_blacklist_cn">Can not edit default blacklist APP</string>
+    <string name="default_blacklist_no">不能更改默认干预应用</string>
+    <string name="saved_cn">Saved</string>
+    <string name="saved_no">已保存</string>
+    <string name="no_save_cn">No changes to save!</string>
+    <string name="no_save_no">无需要保存的内容</string>
+    <string name="tap_in_cn">Tap in to open</string>
+    <string name="tap_in_no">请稍等</string>
+    <string name="spend_time_cn">Today, you have spent a total of </string>
+    <string name="spend_time_no">请稍等，到点了</string>
+    <string name="submit_cn">CONTINUE</string>
+    <string name="submit_cn_ours">Complete Input</string>
+    <string name="submit_cn_controls">Keep Using</string>
+    <string name="submit_no_ours">完成输入</string>
+    <string name="submit_no_controls">继续使用</string>
+    <string name="dismiss_cn">DISMISS to exit</string>
+    <string name="dismiss_cn_ours">Back to Home</string>
+    <string name="dismiss_cn_controls">Exit</string>
+    <string name="dismiss_no_ours">回主界面</string>
+    <string name="dismiss_no_controls">退出应用</string>
+    <string name="noon_text_no">午休时段</string>
+    <string name="noon_text_cn">Noon Break</string>
+    <string name="noon_set_no">设置午休</string>
+    <string name="noon_text_hide_cn">Hide Noon Break</string>
+    <string name="noon_set_hide_cn">Cancel Noon Break Setting</string>
+    <string name="noon_set_hide_no">取消午休设定</string>
+    <string name="noon_set_cn">Set Noon Break</string>
+    <string name="fill_form_no">填写同意书</string>
+    <string name="fill_form_cn">Fill Consent Form</string>
+    <string name="fill_form_title_no">《“无忧”实验-知情同意书》</string>
+    <string name="fill_form_title_cn">
+        In this experiment, the human-computer interaction research team of Tsinghua University and Bofeisheng (Hubei) Technology Co., Ltd. recruited suitable people and invited you to participate in an experimental study. The purpose of this consent form is to provide you with the required information to help you determine whether to participate in this study. Please read this "Experimental Informed Consent" (hereinafter referred to as "Consent") \n\nYou can discuss the purpose of the research, what we will ask you to do, possible risks and benefits, your rights as a volunteer, and Questions about research or any other questions that are not clear in this consent form are sent to welcome@boofei.com. After we have answered all your questions, you can decide whether you are willing to participate in this study. This process is called "informed consent". A copy of your online consent will be kept confidential after storage. \n\n - Research purpose\n\nThe purpose of this research is to study whether a mobile phone intervention application can reduce the frequency and duration of user\'s mobile phone use, improve work/study concentration and efficiency, and get better sleep rest. \n\n - Research process\n\nThe total duration of this research is 10 weeks. At the beginning of the experiment, we will ask you to install an application designed and developed by us on your phone and complete the relevant configuration. In the next 10 weeks, the application will run in the background of the phone and intervene in the use of other applications. \n\nSpecifically, when you try to use an entertainment type of application in a certain period of time, you will need to pay additional operations to start using the application (for example, you need to click "confirm" more than once or you need to enter some text, etc. ). These functions and restrictions are designed to reduce the improper use of mobile phones, and will hardly have a negative impact on your work or study. In 10 weeks, you only need to make sure that our app is running in the background of your phone. \n\nIn order to ensure that our application can run normally, please make sure that the application is kept open in the background as much as possible! If you accidentally close it, please reopen the app in time and leave it in the background. \n\nThe application will also collect some of your usage information, including reading text messages and call logs (only the number and duration), WiFi access, Bluetooth usage, location information, screen status, other installed apps, and app usage Situation, phone storage, display floating window, notification, etc. We will not collect any specific content of your visit to the application, but only the start and end timestamps, etc. \n\nIn addition, you need to fill out the questionnaire once a week, which will take you 5-10 minutes. After the 10-week experiment is over, we may invite you to conduct an interview. We will establish a WeChat group and synchronize the specific progress of the experiment within the group. \n\n - Risk, stress or possible discomfort\n\nPotential risks include the intervention of the app that will prevent you from quickly accessing certain apps. In this regard, we also provide a button to "skip" the application, but we do not recommend that you use it without a special reason, as this will affect our experiment results and your compensation. \n\nIf you do not use WiFi or have limited data traffic, using our application may cause additional data costs, but we do not reimburse this part of the cost. After experimentation, the traffic used by this application is very limited, generally no more than 10MB per day. \n\n - Benefits of research\n\nThe personal benefits of this intervention include helping you reduce overuse of mobile phones, and the knowledge gained from the experiment itself will also help all mobile phone users. \n\n - Confidentiality of research information\n\nIn this research, researchers will take the following measures to protect the identity of participants. (1) Each participant will be assigned a unique study number; (2) Researchers will record any data collected during the study by number instead of name. Therefore, all data will be anonymous. At the same time, we do not collect any specific usage content. We may share your anonymous data with other university partners in the future. \n\n - Informed confirmation\n\nThis research has been explained clearly to me. I volunteered to participate in this study. I have the opportunity to ask questions and have already been answered. If I have questions about the research in the future, or if I am harmed by participating in this research, I can contact one of the researchers listed on the first page of this consent form. \n\nI certify that I have explained the nature and purpose of this research to the above-mentioned individuals, and I have discussed the potential benefits and possible risks of participating in this research. Any questions the person has about this research have been answered, and any questions that arise in the future will be answered. \n\nI agree to be contacted after the experimental study is over for further information. \n\n\nTsinghua University\nBofeisheng Technology (Hubei) Co., Ltd.
+    </string>
+    <string name="fill_form_content_no">
+        本实验是由清华大学人机交互研究小组联合博菲盛（湖北）科技有限公司招募适用人群，邀请您参加一项实验研究。本同意书的目的是向您提供所需的信息，以帮助您确定是否参加本研究。请仔细阅读本《实验知情同意书》（后称“同意书”） \n\n您可以就研究的目的、我们会要求您做什么、可能的风险和益处、您作为志愿者的权利、以及关于研究或本同意书不清楚的任何其他问题提出问题发送到welcome@boofei.com。 当我们回答了您所有的问题后，您就可以决定您是否愿意参加这项研究。这个过程被称为 "知情同意"。您的在线同意副本，我们会储存之后保密保存。\n\n  -- 研究目的\n\n本研究的目的是研究一款手机干预应用能否减少用户的手机使用频率和时长，提高工作/学习的专注度与效率，以及得到更好的睡眠休息。\n\n  -- 研究流程\n\n本研究总时长为10周。我们将在实验的开始要求您在手机上安装一款我们设计开发的应用，并完成相关的配置。在接下来的10周里，该应用会在手机的后台运行，并对其他应用的使用进行干预。\n\n具体而言，您在某些时间段内尝试使用娱乐类型的应用时，将需要付出额外的操作才能开始使用该应用（如需要多点一次“确认”或需要输入某些文字等）。这些功能和限制是为了减少手机的不正当使用，对您的工作或学习几乎不会造成负面影响。在10周时间内，您只需要确保我们的应用在您手机后台运行即可。\n\n为了确保我们的应用能够正常运行，请尽可能确保该应用在后台保持开启！如果您不小心将其关闭，请您及时重新开启应用并将其留在后台。\n\n该应用程序还会收集您的一些使用信息，包括读取短信和通话记录（仅包含数量和时长）、WiFi访问、蓝牙使用、位置信息、屏幕状态、其他已安装应用、应用使用情况、手机存储、显示悬浮窗、通知等。我们不会收集您访问应用的任何具体内容，而仅会收集开始与结束的时间戳等。\n\n此外，您还需要每周填写一次问卷，这将花费您5 - 10分钟。在10周实验结束后，我们可能会邀请您进行访谈。我们将建立微信群，并在群内同步实验的具体进程。\n\n  -- 风险、压力或可能的不适\n\n潜在的风险包括该应用的干预将阻止您某些应用的快速访问。对此，我们也提供了“跳过”应用的按钮，但我们不建议您在没有特殊理由的情况下使用，这将影响我们的实验效果以及您的报酬。\n\n如果您不适用WiFi或数据流量有限，使用我们的应用可能造成额外的数据费用，但我们不报销这部分费用。经过实验，该应用使用的流量是十分有限的，一般每天不超过10MB。\n\n  -- 研究的益处\n\n该干预的个人益处包括能帮助您减少手机的过度使用，而实验本身获得的知识也将帮助到所有手机用户。\n\n  -- 研究信息的保密\n\n在本研究中，研究人员将采取以下措施来保护参与者的身份。(1)每个参与者将被分配一个独特的研究号码；(2)研究人员将按号码而不是姓名来记录研究期间收集的任何数据。因此，所有的数据都将是匿名的。同时，我们不收集任何具体的使用内容。我们将来可能会与其他大学的合作者分享你的匿名数据。\n\n  -- 知情确认\n\n这项研究已经向我解释清楚。 我自愿参加这项研究。 我有机会提出问题并已经得到解答。 如果我以后对研究有疑问，或者我因参与本研究而受到伤害，我可以与本同意书第一页上所列的研究人员之一联系。\n\n我证明我已经向上述个人解释了这项研究的性质和目的，并且我已经讨论了参与这项研究的潜在利益和可能的风险。 该人关于本研究的任何问题都已得到回答，今后出现的任何问题都将得到回答。\n\n我同意在实验研究结束后被联系，以获取进一步信息。\n\n\n清华大学\n博菲盛科技（湖北）有限公司
+    </string>
+    <string name="fill_form_content_cn">User Informed Consent Form Content</string>
+    <string name="fill_form_done_no">已填写同意书</string>
+    <string name="fill_form_done_cn">Successfully filled the Consent Form</string>
+    <string name="fill_form_need_no">请先点击 填写同意书 并同意，再加入实验</string>
+    <string name="fill_form_need_cn">Please click to fill out the consent form and agree before joining the experiment</string>
+    <string name="register">Register</string>
+    <string name="sync">Sync</string>
+    <string name="input_password">Please type password</string>
+    <string name="switch_phase">Switch Phase</string>
+    <string name="setup_cn">Setup</string>
+    <string name="setup_no">Setup</string>
+    <string name="typeout_cn">TypeOut</string>
+    <string name="typeout_no">TypeOut</string>
+    <string name="useless_cn">Use less,\nEnjoy more</string>
+    <string name="useless_no">Use less,\nEnjoy more</string>
+    >>>>>>> accessibility
+</resources>

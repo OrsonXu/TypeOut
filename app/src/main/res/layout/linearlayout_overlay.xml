@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/oView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ImageButton
+        android:id="@+id/skipButton"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_gravity="end"
+        android:alpha="0.4"
+        android:layout_marginEnd="20dp"
+        app:srcCompat="@android:drawable/btn_dialog" />
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp" />
+
+    <LinearLayout
+        android:id="@+id/inView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:orientation="horizontal"></LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/persuasive_icon"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        app:srcCompat="@mipmap/working_icon_transluscent" />
+
+    <TextView
+        android:id="@+id/instruction_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:foregroundTint="@color/input_text"
+        android:gravity="center"
+        android:text=""
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/input_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="8dp"
+        android:foregroundTint="@color/input_text"
+        android:textSize="8sp" />
+
+    <EditText
+        android:id="@+id/input_text_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/input_text"
+        android:ems="10"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:inputType="textNoSuggestions"
+        android:privateImeOptions="nm" />
+<!--        android:inputType="textPersonName|textNoSuggestions|textVisiblePassword"/>-->
+<!--    |textVisiblePassword-->
+<!--    android:privateImeOptions="nm"-->
+
+    <TextView
+        android:id="@+id/middle_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:foregroundTint="@color/input_text"
+        android:gravity="center"
+        android:text=""
+        android:textSize="8sp" />
+
+    <Space
+        android:id="@+id/middle_space"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:foregroundTint="@color/input_text" />
+
+    <TextView
+        android:id="@+id/input_text2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="@color/input_text"
+        android:drawableTint="@color/input_text"
+        android:foregroundTint="@color/input_text"
+        android:text="test"
+        android:textSize="8sp" />
+
+    <TextView
+        android:id="@+id/hint_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:foregroundTint="@color/input_text"
+        android:gravity="center"
+        android:text=""
+        android:textSize="8sp" />
+
+    <EditText
+        android:id="@+id/input_text_box2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/input_text"
+        android:ems="10"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:inputType="textNoSuggestions"
+        android:privateImeOptions="nm" />
+
+    <Space
+        android:id="@+id/bottom_space"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:foregroundTint="@color/input_text" />
+    <Button
+        android:id="@+id/input_audio_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="点按说话" />
+
+    <LinearLayout
+        android:id="@+id/button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"></LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.aware.smartphoneuse">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+    <uses-permission android:name="android.permission.BIND_ACCESSIBILITY_SERVICE"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+
+    <permission
+        android:name="com.aware.WRITE_CONTEXT_DATA"
+        android:description="@string/write_permission"
+        android:icon="@drawable/ic_launcher_settings"
+        android:label="Write to AWARE&apos;s Context data"
+        android:protectionLevel="normal" />
+
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name_cn"
+        android:persistent="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon">
+        <activity android:name=".OverlayActivity"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+        </activity>
+        <!-- tools:replace="android:icon,android:appComponentFactory" -->
+        <activity
+            android:name=".WhitelistActivity"
+            android:label="@string/title_activity_whitelist"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.aware.smartphoneuse.MainActivity" />
+        </activity>
+        <activity
+            android:name=".SetupActivity"
+            android:label="@string/title_activity_setup"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.aware.smartphoneuse.MainActivity" />
+        </activity>
+        <activity android:name=".MainActivity"
+            android:launchMode="singleInstance">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- Adding accessibility service to this app -->
+        <service
+            android:name="com.aware.Applications"
+            android:enabled="true"
+            android:exported="true"
+            android:label="AWARE"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE"
+            tools:replace="android:enabled">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+
+                <category android:name="android.accessibilityservice.category.FEEDBACK_GENERIC" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/aware_accessibility_config" />
+        </service> <!-- <service android:name="com.aware.smartphoneuse.JoinStudyService" /> -->
+        <!-- This allows the core library to instanciate this plugin. You need the package.class and exported to true -->
+        <service android:name=".Plugin">
+            <intent-filter>
+                <action android:name="ACTION_FIRST_RUN_APPUSEPLUGIN" />
+            </intent-filter>
+        </service> <!-- <service android:name="com.aware.smartphoneuse.JoinStudyService" /> -->
+        <!-- <service -->
+        <!-- android:name=".Plugin" -->
+        <!-- android:exported="true" /> -->
+        <provider
+            android:name=".Provider"
+            android:authorities="@string/provider_applicationsdiff"
+            android:exported="true"
+            android:label="AppUseProvider"
+            android:readPermission="com.aware.READ_CONTEXT_DATA"
+            android:writePermission="com.aware.WRITE_CONTEXT_DATA" /> <!-- <receiver android:name="com.aware.smartphoneuse.Plugin$SyncReceiver"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="ACTION_AWARE_SYNC_DATA" /> -->
+        <!-- </intent-filter> -->
+        <!-- </receiver> -->
+        <service
+            android:name=".syncadapters.AppUseSync"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.content.SyncAdapter"
+                android:resource="@xml/sync_appuse" />
+        </service>
+        <service
+            android:name=".Timeout"
+            android:exported="false" />
+
+        <receiver android:name=".Autostart">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".MyAccessibilityService"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService"/>
+            </intent-filter>
+            <meta-data android:name="android.accessibilityservice"
+                android:resource="@xml/my_accessibility_service"/>
+        </service>
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="fd3e53fc8c6bba90f1f8b62ce50c0c423c299962" />
+        <meta-data
+            android:name="IFLYTEK_APPKEY"
+            android:value="be572664" />
+    </application>
+
+</manifest>
